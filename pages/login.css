@@ -27,6 +27,9 @@ h1 {
 /* inputs */
 
 .campos-criar-conta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nome-input,
@@ -110,4 +113,61 @@ input[type="submit"]:hover,
 input[type="button"]:hover {
   background-color: #1a1f7f; /* Cor de fundo mais escura ao passar o cursor */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao passar o cursor */
+}
+
+/* Media queries */
+
+/* Tablet view */
+@media (min-width: 400px) {
+  section {
+    width: 80%;
+    border: 1px solid #cccccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    margin-top: 2rem;
+  }
+
+  .campos-criar-conta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input[type="submit"],
+  input[type="button"] {
+    width: auto;
+  }
+}
+
+/* Desktop view */
+@media (min-width: 992px) {
+  section {
+    width: 60%;
+    border: 1px solid #cccccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    margin-top: 2rem;
+  }
+
+  .campos-criar-conta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  section {
+    width: 50%;
+    border: 1px solid #cccccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    margin-top: 2rem;
+  }
+
+  .campos-criar-conta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
