@@ -21,5 +21,5 @@ function getErrorMessage(input) {
 }
 
 function entrarSemLogin() {
-  window.location.href = "index.html"; // Redireciona para index.html
+  window.location.href = "home.html"; // Redireciona para index.html
 }
