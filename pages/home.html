@@ -7,10 +7,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../pages/css/home.css" />
+    <script src="js/home.js"></script>
   </head>
   <body>
     <header>
@@ -18,11 +25,13 @@
         <h3>FRETE GRÁTIS PARA COMPRAS ACIMA DE 99 R$</h3>
       </div>
       <nav class="nav-bar">
-        <div class="icone-menu-hamburguer">
+        <div class="icone-menu-hamburguer" id="menu-icon">
           <img
+            id="menu-icon"
             class="navbar-icon"
             src="../assets/assets/images/icone-hamburguer.png"
             alt="ícone de menu hamburguer"
+            onclick="abrirMenuHamburguer()"
           />
         </div>
         <div class="icone-boti">
@@ -33,9 +42,31 @@
             class="navbar-icon"
             src="../assets/assets/images/icone-usuario.png"
             alt="ícone de usuário"
+            onclick="voltarParaLogin()"
           />
         </div>
       </nav>
+
+      <!-- SIDEBAR -->
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-top">
+          <h1 class="icone-boti icone-sidebar">BOTI STUDENTS</h1>
+          <img
+            id="icone-close"
+            class="navbar-icon"
+            src="../assets/assets/images/icone-close.png"
+            alt="imagem em formato de X para fechar o menu lateral"
+            onclick="fecharMenuHamburguer()"
+          />
+        </div>
+        <div class="sidebar-bottom">
+          <h3 class="sidebar-link">HOME</h3>
+          <h3 class="sidebar-link">COLEÇÃO</h3>
+          <h3 class="sidebar-link">COMPRE</h3>
+          <h3 class="sidebar-link">OFERTAS</h3>
+          <h3 class="sidebar-link">CONTATO</h3>
+        </div>
+      </div>
     </header>
   </body>
 </html>
