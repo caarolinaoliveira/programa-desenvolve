@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  background-color: var(--cor-branco);
+}
+
+:root {
+  --fonte-principal: "Poppins", sans-serif, bold;
+  --cor-azul: #2028eb;
+  --cor-cinza: #d8d3d3;
+  --cor-branco: #ffffff;
+}
+section {
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-branco);
+  height: 550px;
+  margin: auto;
+  text-align: center;
+  padding-top: 5rem;
+}
+h1 {
+  color: var(--cor-azul);
+  font-family: var(--fonte-principal);
+  font-size: 30;
+  padding-bottom: 1rem;
+}
+
+/* inputs */
+
+.campos-criar-conta {
+}
+
+.nome-input,
+.email-input,
+.senha-input {
+  text-decoration: none;
+  font-family: var(--fonte-principal);
+  height: 3rem;
+  width: 14rem;
+  background-color: var(--cor-cinza);
+  color: var(--cor-branco);
+  border: none;
+  border-radius: 0.6rem;
+  padding-right: 0.5rem;
+  padding-left: 10px;
+  outline: none;
+  margin-top: 2rem;
+}
+
+.nome-input::placeholder,
+.email-input::placeholder,
+.senha-input::placeholder {
+  color: #5d5c5c; /* Cor do placeholder */
+  opacity: 1; /* Para alguns browsers */
+  border: none;
+}
+.nome-input:focus,
+.email-input:focus,
+.senha-input:focus {
+  border-color: #6e7b85; /* Cor da borda ao focar */
+  box-shadow: 0 0 8px rgba(102, 110, 117, 0.6); /* Sombra ao focar */
+  color: #3d3d3d;
+}
+
+.nome-input:valid,
+.email-input:valid,
+.senha-input:valid {
+  background-color: #e0e0e0; /* Cor de fundo mais escura */
+  color: #28a745; /* Cor do texto mais escura */
+  border-color: #66afe9; /* Manter a cor da borda ao focar */
+}
+.nome-input:invalid,
+.email-input:invalid,
+.senha-input:invalid {
+  background-color: #e0e0e0; /* Cor de fundo mais escura */
+  color: #ff0019; /* Cor do texto mais escura */
+  border-color: #66afe9; /* Manter a cor da borda ao focar */
+}
+
+/* configuração do label */
+.message.valid-message {
+  color: #28a745; /* Verde para mensagens válidas */
+}
+
+.message.invalid-message {
+  color: #dc3545; /* Vermelho para mensagens inválidas */
+}
+.message {
+  font-family: var(--fonte-principal);
+  font-size: 14px;
+}
+
+/* estilização dos botões  */
+
+input[type="submit"],
+input[type="button"] {
+  background-color: var(--cor-azul); /* Cor de fundo azul */
+  color: var(--cor-branco); /* Cor da fonte branca */
+  border: none; /* Remove a borda padrão */
+  padding: 10px 20px; /* Espaçamento interno */
+  margin: 7px; /* Espaçamento externo */
+  border-radius: 4px; /* Borda arredondada */
+  font-size: 16px; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Transição suave */
+  margin-top: 2rem;
+}
+
+/* Efeito ao passar o cursor sobre o botão */
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background-color: #1a1f7f; /* Cor de fundo mais escura ao passar o cursor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao passar o cursor */
+}
