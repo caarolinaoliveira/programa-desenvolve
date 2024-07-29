@@ -16,8 +16,9 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="css/home.css" />
-    <script src="js/home.js"></script>
+    <script src="js/home.js" defer></script>
   </head>
   <body>
     <header>
@@ -54,7 +55,7 @@
           <img
             id="icone-close"
             class="navbar-icon"
-            src="../assets/assets/images/icone-close.png"
+            src="assets/assets/images/icone-close.png"
             alt="imagem em formato de X para fechar o menu lateral"
             onclick="fecharMenuHamburguer()"
           />
@@ -68,5 +69,22 @@
         </div>
       </div>
     </header>
+
+    <main class="main">
+      <h1 class="titulo-imagem-principal">Revele a beleza da sua pele</h1>
+      <p class="descricao-imagem-principal">
+        Produzido sem ingredientes tóxicos e sem testes em animais. <br />
+        Nossos produtos foram pensados para todo mundo.
+      </p>
+      <h2 class="preco-imagem-">Preços a partir de R$ 29</h2>
+      <div class="botao-imagem-principal">
+        <input
+          type="button"
+          value="Compre agora"
+          class="compre-agora"
+          onclick="compreAgora()"
+        />
+      </div>
+    </main>
   </body>
 </html>
