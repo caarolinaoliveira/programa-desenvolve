@@ -147,8 +147,40 @@
   margin-left: 0; /* Remove a margem esquerda do primeiro item */
 }
 
-/* IMAGEM PRINCIPAL */
+/* Estilos para telas menores (tablets) */
+@media (max-width: 768px) {
+  .nav-bar-3 {
+    flex-direction: column; /* Muda a direção dos itens para coluna */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+  }
 
+  .nav-bar-3-usuario,
+  .nav-bar-3-pesquisar,
+  .nav-bar-3-carrinho {
+    width: 24px; /* Aumenta o tamanho dos ícones */
+    height: 24px;
+    margin-left: 10px; /* Reduz o espaço entre as imagens */
+  }
+}
+
+/* Estilos para telas muito pequenas (smartphones) */
+@media (max-width: 480px) {
+  .nav-bar-3 {
+    flex-direction: column; /* Muda a direção dos itens para coluna */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    padding: 10px; /* Adiciona padding para melhorar o espaçamento */
+  }
+
+  .nav-bar-3-usuario,
+  .nav-bar-3-pesquisar,
+  .nav-bar-3-carrinho {
+    width: 30px; /* Aumenta ainda mais o tamanho dos ícones */
+    height: 30px;
+    margin-left: 8px; /* Reduz o espaço entre as imagens */
+  }
+}
+
+/* IMAGEM PRINCIPAL */
 .imagem-principal {
   background: url(../assets/img-fundoprincipal-png.png);
   background-color: var(--cor-branco);
@@ -200,10 +232,44 @@
   background-color: var(--cor-hover);
 }
 
+/* Estilos para telas menores (tablets) */
+@media (max-width: 768px) {
+  .imagem-principal-titulo {
+    font-size: 48px; /* Reduzir o tamanho da fonte */
+  }
+
+  .imagem-principal-descricao {
+    font-size: 16px; /* Reduzir o tamanho da fonte */
+  }
+
+  .imagem-principal-botao {
+    height: 2.5rem; /* Reduzir a altura do botão */
+    width: 12rem; /* Reduzir a largura do botão */
+    font-size: 14px; /* Reduzir o tamanho da fonte no botão */
+  }
+}
+
+/* Estilos para telas muito pequenas (smartphones) */
+@media (max-width: 480px) {
+  .imagem-principal-titulo {
+    font-size: 36px; /* Reduzir ainda mais o tamanho da fonte */
+  }
+
+  .imagem-principal-descricao {
+    font-size: 14px; /* Reduzir ainda mais o tamanho da fonte */
+  }
+
+  .imagem-principal-botao {
+    height: 2rem; /* Reduzir ainda mais a altura do botão */
+    width: 10rem; /* Reduzir ainda mais a largura do botão */
+    font-size: 12px; /* Reduzir ainda mais o tamanho da fonte no botão */
+  }
+}
+
 /* TEXTO ELABORADO */
 .texto-elaborado {
   background-color: var(--cor-branco);
-  height: 70vh;
+  height: 80vh;
   display: flex;
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
@@ -220,6 +286,7 @@
   color: var(--cor-marrom);
   font-weight: lighter;
 }
+
 .texto-elaborado-2 {
   display: flex;
   flex-direction: row;
@@ -232,7 +299,6 @@
   display: flex;
   align-items: center; /* Alinha verticalmente a imagem e o texto */
   margin: 0 2rem; /* Adiciona espaçamento horizontal entre os itens */
-  /* Ajuste o valor conforme necessário */
 }
 
 .icone-texto-elaborado {
@@ -249,6 +315,67 @@
   margin: 0; /* Remove a margem superior e inferior para alinhamento adequado */
 }
 
+/* Estilos para telas menores (tablets) */
+@media (max-width: 768px) {
+  .texto-elaborado {
+    padding-left: 2rem; /* Reduzir o padding lateral */
+    padding-right: 2rem; /* Reduzir o padding lateral */
+  }
+
+  .texto-elaborado-titulo {
+    font-size: 28px; /* Reduzir o tamanho da fonte */
+  }
+
+  .texto-elaborado-2 {
+    padding-top: 2rem; /* Reduzir o padding superior */
+    flex-direction: column; /* Mudar para coluna em vez de linha */
+    align-items: center; /* Centralizar os itens verticalmente */
+  }
+
+  .texto-elaborado-item {
+    margin: 1rem 0; /* Adicionar espaçamento vertical entre os itens */
+    flex-direction: row; /* Garantir que a direção seja linha */
+  }
+
+  .icone-texto-elaborado {
+    width: 24px; /* Reduzir o tamanho do ícone */
+    height: 24px; /* Reduzir o tamanho do ícone */
+  }
+
+  .texto-elaborado-descricao {
+    font-size: 12px; /* Reduzir o tamanho da fonte */
+  }
+}
+
+/* Estilos para telas muito pequenas (smartphones) */
+@media (max-width: 480px) {
+  .texto-elaborado {
+    padding-left: 1rem; /* Reduzir ainda mais o padding lateral */
+    padding-right: 1rem; /* Reduzir ainda mais o padding lateral */
+  }
+
+  .texto-elaborado-titulo {
+    font-size: 24px; /* Reduzir ainda mais o tamanho da fonte */
+  }
+
+  .texto-elaborado-2 {
+    padding-top: 1rem; /* Reduzir o padding superior */
+  }
+
+  .texto-elaborado-item {
+    margin: 0.5rem 0; /* Reduzir o espaçamento vertical entre os itens */
+  }
+
+  .icone-texto-elaborado {
+    width: 20px; /* Reduzir o tamanho do ícone */
+    height: 20px; /* Reduzir o tamanho do ícone */
+  }
+
+  .texto-elaborado-descricao {
+    font-size: 10px; /* Reduzir o tamanho da fonte */
+  }
+}
+
 /* BANNER SECUNDARIO */
 .section-banner-secundario {
   background: url(../assets/img-fundo-png.png);
@@ -256,29 +383,33 @@
   background-size: cover; /* Cobrir toda a área da seção */
   background-position: center; /* Centralizar a imagem */
   background-repeat: no-repeat; /* Não repetir a imagem */
-  height: 70vh; /* Altura de 100% da viewport */
+  height: 70vh; /* Altura de 70% da viewport */
   display: flex;
   flex-direction: row;
-  justify-content: center; /* Centralizar verticalmente */
-  align-items: center; /* Centralizar horizontalmente */
+  justify-content: center; /* Centralizar horizontalmente */
+  align-items: center; /* Centralizar verticalmente */
   text-align: center; /* Centralizar texto */
+  padding: 2rem; /* Adicionar padding para garantir espaçamento */
 }
 
 .banner-left {
   margin: auto;
 }
+
 .banner-left-titulo {
   font-family: var(--fonte-alternativa);
   font-size: 24px;
   color: var(--cor-branco);
   font-weight: lighter;
+  margin-bottom: 1rem; /* Espaço inferior */
 }
+
 .banner-left-descricao {
   font-family: var(--fonte-poppins);
   color: var(--cor-branco);
   font-size: 14px;
   font-weight: lighter;
-  padding-top: 2rem;
+  padding-top: 1rem; /* Espaço superior reduzido */
 }
 
 .banner-secundario-botao {
@@ -290,13 +421,8 @@
   color: var(--cor-branco);
   border: none;
   border-radius: 0.6rem;
-  padding-right: 0.5rem;
-  padding-left: 10px;
-  outline: none;
-  margin-top: 2rem;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+  padding: 0 1rem; /* Ajustar padding */
+  margin-top: 1.5rem; /* Espaço superior reduzido */
   cursor: pointer;
 }
 
@@ -308,6 +434,62 @@
   width: 600px;
   height: 400px;
   padding-right: 2rem;
+}
+
+/* Estilos para telas menores (tablets) */
+@media (max-width: 768px) {
+  .section-banner-secundario {
+    flex-direction: column; /* Mudar para coluna em vez de linha */
+    height: auto; /* Ajustar altura automaticamente */
+    padding: 2rem; /* Adicionar padding para garantir espaçamento */
+    text-align: center;
+  }
+
+  .banner-left-titulo {
+    font-size: 20px; /* Reduzir o tamanho da fonte */
+  }
+
+  .banner-left-descricao {
+    font-size: 12px; /* Reduzir o tamanho da fonte */
+    padding-top: 1rem; /* Reduzir o espaçamento superior */
+  }
+
+  .banner-secundario-botao {
+    height: 2.5rem; /* Reduzir a altura do botão */
+    width: 12rem; /* Reduzir a largura do botão */
+    font-size: 14px; /* Reduzir o tamanho da fonte do botão */
+  }
+
+  .banner-right-img {
+    width: 100%; /* Ajustar para a largura total do contêiner */
+    height: auto; /* Ajustar altura proporcionalmente */
+    padding-right: 0; /* Remover padding direito */
+    margin-top: 1rem; /* Adicionar espaço superior */
+  }
+}
+
+/* Estilos para telas muito pequenas (smartphones) */
+@media (max-width: 480px) {
+  .banner-left-titulo {
+    font-size: 18px; /* Reduzir ainda mais o tamanho da fonte */
+  }
+
+  .banner-left-descricao {
+    font-size: 10px; /* Reduzir o tamanho da fonte */
+  }
+
+  .banner-secundario-botao {
+    height: 2rem; /* Reduzir a altura do botão */
+    width: 10rem; /* Reduzir a largura do botão */
+    font-size: 12px; /* Reduzir o tamanho da fonte do botão */
+  }
+
+  .banner-right-img {
+    width: 100%; /* Ajustar para a largura total do contêiner */
+    height: auto; /* Ajustar altura proporcionalmente */
+    padding-right: 0; /* Remover padding direito */
+    margin-top: 1rem; /* Adicionar espaço superior */
+  }
 }
 
 /* PRODUTOS EM DESTAQUE */
@@ -341,6 +523,7 @@
   overflow: hidden;
   position: relative; /* Para posicionar os elementos absolutamente em relação a este contêiner */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transformação e a sombra */
+  margin-top: 2rem;
 }
 
 .container-produtos:hover {
@@ -444,19 +627,21 @@
 }
 
 /* BANNER TERCIÁRIO */
+/* Estilo padrão para telas grandes */
 .section-banner-terciario {
   background: url(../assets/img-fundo-png.png);
   background-color: var(--cor-branco);
   background-size: cover; /* Cobrir toda a área da seção */
   background-position: center; /* Centralizar a imagem */
   background-repeat: no-repeat; /* Não repetir a imagem */
-  height: 70vh; /* Altura de 100% da viewport */
+  height: 90vh; /* Altura de 90% da viewport */
   display: flex;
   flex-direction: row;
-  justify-content: center; /* Centralizar verticalmente */
-  align-items: center; /* Centralizar horizontalmente */
+  justify-content: center; /* Centralizar horizontalmente */
+  align-items: center; /* Centralizar verticalmente */
   text-align: center; /* Centralizar texto */
 }
+
 .titulo-banner-terciario {
   font-family: var(--fonte-alternativa);
   font-size: 48px;
@@ -471,6 +656,45 @@
   color: var(--cor-branco);
   text-align: center;
 }
+
 .banner-terciario-left {
   padding: 3rem;
+}
+
+/* Estilos para telas menores (tablets) */
+@media (max-width: 768px) {
+  .section-banner-terciario {
+    flex-direction: column; /* Mudar para coluna em vez de linha */
+    height: auto; /* Ajustar altura automaticamente */
+    padding: 2rem; /* Adicionar algum preenchimento */
+  }
+
+  .titulo-banner-terciario {
+    font-size: 36px; /* Reduzir o tamanho da fonte */
+    padding-bottom: 1rem; /* Reduzir o espaçamento inferior */
+  }
+
+  .descricao-banner-terciario {
+    font-size: 16px; /* Reduzir o tamanho da fonte */
+  }
+
+  .banner-terciario-left {
+    padding: 2rem; /* Reduzir o padding */
+  }
+}
+
+/* Estilos para telas muito pequenas (smartphones) */
+@media (max-width: 480px) {
+  .titulo-banner-terciario {
+    font-size: 24px; /* Reduzir ainda mais o tamanho da fonte */
+    padding-bottom: 0.5rem; /* Ajustar o espaçamento inferior */
+  }
+
+  .descricao-banner-terciario {
+    font-size: 14px; /* Reduzir o tamanho da fonte */
+  }
+
+  .banner-terciario-left {
+    padding: 1rem; /* Reduzir o padding */
+  }
 }
