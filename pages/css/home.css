@@ -10,8 +10,10 @@
   --cor-branco: #ffffff;
   --cor-marrom: #251d18;
   --cor-verde: #51994b;
+  --cor-hover: #6b4f4a; /* Cor de fundo ao passar o mouse */
 }
 
+/* FRETE GRÁTIS */
 .frete-gratis {
   width: 100%;
   background-color: var(--cor-marrom);
@@ -42,4 +44,103 @@
   100% {
     transform: translateX(-100%);
   }
+}
+
+/* NAV BAR */
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px; /* Adicionado padding para garantir espaçamento interno */
+  box-sizing: border-box;
+}
+
+.nav-bar-1 {
+}
+
+.nav-bar-boti {
+  font-family: var(--fonte-alternativa);
+  font-size: 36px;
+}
+
+/* nav bar meio */
+.nav-bar-2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; /* Garante que os itens não quebrem para a próxima linha */
+}
+
+.nav-bar-home,
+.nav-bar-loja,
+.nav-bar-nossa-historia,
+.nav-bar-crud {
+  font-family: var(--fonte-poppins);
+  font-weight: 300; /* lighter */
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 20px; /* Espaço entre os itens */
+  position: relative; /* Necessário para a sublinha animada */
+  transition: color 0.3s, transform 0.3s; /* Transição suave */
+}
+
+.nav-bar-home:hover,
+.nav-bar-loja:hover,
+.nav-bar-nossa-historia:hover,
+.nav-bar-crud:hover {
+  color: var(--cor-verde); /* Mudança da cor do texto */
+  transform: scale(1.1); /* Aumento da escala */
+}
+
+/* Sublinha animada */
+.nav-bar-home::after,
+.nav-bar-loja::after,
+.nav-bar-nossa-historia::after,
+.nav-bar-crud::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--cor-verde);
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.nav-bar-home:hover::after,
+.nav-bar-loja:hover::after,
+.nav-bar-nossa-historia:hover::after,
+.nav-bar-crud:hover::after {
+  width: 100%;
+}
+
+.nav-bar-2 > *:last-child {
+  margin-right: 0; /* Remove a margem direita do último item */
+}
+
+/* nav bar end */
+.nav-bar-3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-bar-3-usuario,
+.nav-bar-3-pesquisar,
+.nav-bar-3-carrinho {
+  width: 21px;
+  height: 21px;
+  cursor: pointer;
+  margin-left: 15px; /* Espaço entre as imagens */
+  transition: transform 0.3s; /* Transição suave */
+}
+
+.nav-bar-3-usuario:hover,
+.nav-bar-3-pesquisar:hover,
+.nav-bar-3-carrinho:hover {
+  transform: scale(1.1); /* Aumento da escala */
+}
+
+.nav-bar-3 > *:first-child {
+  margin-left: 0; /* Remove a margem esquerda do primeiro item */
 }
