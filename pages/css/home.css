@@ -247,3 +247,66 @@
   font-weight: 400;
   margin: 0; /* Remove a margem superior e inferior para alinhamento adequado */
 }
+
+/* BANNER SECUNDARIO */
+.section-banner-secundario {
+  background: url(../assets/img-fundo-png.png);
+  background-color: var(--cor-branco);
+  background-size: cover; /* Cobrir toda a área da seção */
+  background-position: center; /* Centralizar a imagem */
+  background-repeat: no-repeat; /* Não repetir a imagem */
+  height: 70vh; /* Altura de 100% da viewport */
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Centralizar verticalmente */
+  align-items: center; /* Centralizar horizontalmente */
+  text-align: center; /* Centralizar texto */
+}
+
+.banner-left {
+  margin: auto;
+}
+.banner-left-titulo {
+  font-family: var(--fonte-alternativa);
+  font-size: 24px;
+  color: var(--cor-branco);
+  font-weight: lighter;
+}
+.banner-left-descricao {
+  font-family: var(--fonte-poppins);
+  color: var(--cor-branco);
+  font-size: 14px;
+  font-weight: lighter;
+  padding-top: 2rem;
+}
+
+.banner-secundario-botao {
+  text-decoration: none;
+  font-family: var(--fonte-poppins);
+  height: 3rem;
+  width: 14rem;
+  background-color: var(--cor-verde);
+  color: var(--cor-branco);
+  border: none;
+  border-radius: 0.6rem;
+  padding-right: 0.5rem;
+  padding-left: 10px;
+  outline: none;
+  margin-top: 2rem;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  cursor: pointer;
+}
+
+.banner-secundario-botao:hover {
+  background-color: var(--cor-hover);
+}
+.banner-right {
+}
+
+.banner-right-img {
+  width: 600px;
+  height: 400px;
+  padding-right: 2rem;
+}
