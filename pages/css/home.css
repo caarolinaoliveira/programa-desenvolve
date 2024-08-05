@@ -145,3 +145,105 @@
 .nav-bar-3 > *:first-child {
   margin-left: 0; /* Remove a margem esquerda do primeiro item */
 }
+
+/* IMAGEM PRINCIPAL */
+
+.imagem-principal {
+  background: url(../assets/img-fundoprincipal-png.png);
+  background-color: var(--cor-branco);
+  background-size: cover; /* Cobrir toda a área da seção */
+  background-position: center; /* Centralizar a imagem */
+  background-repeat: no-repeat; /* Não repetir a imagem */
+  height: 100vh; /* Altura de 100% da viewport */
+  display: flex; /* Usar Flexbox */
+  flex-direction: column; /* Organizar o conteúdo em coluna */
+  justify-content: center; /* Centralizar verticalmente */
+  align-items: center; /* Centralizar horizontalmente */
+  text-align: center; /* Centralizar texto */
+}
+
+.imagem-principal-titulo {
+  font-family: var(--fonte-alternativa);
+  font-weight: lighter;
+  color: var(--cor-branco);
+  font-size: 64px;
+}
+
+.imagem-principal-descricao {
+  font-family: var(--fonte-poppins);
+  color: var(--cor-branco);
+  font-size: 18px;
+  font-weight: lighter;
+  margin-top: 1rem; /* Espaço superior */
+}
+
+.imagem-principal-botao {
+  text-decoration: none;
+  font-family: var(--fonte-poppins);
+  height: 3rem;
+  width: 14rem;
+  background-color: var(--cor-verde);
+  color: var(--cor-branco);
+  border: none;
+  border-radius: 0.6rem;
+  padding-right: 0.5rem;
+  padding-left: 10px;
+  outline: none;
+  margin-top: 2rem; /* Espaço superior */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagem-principal-botao:hover {
+  background-color: var(--cor-hover);
+}
+
+/* TEXTO ELABORADO */
+.texto-elaborado {
+  background-color: var(--cor-branco);
+  height: 70vh;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  text-align: center;
+  margin: auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  flex-direction: column;
+}
+
+.texto-elaborado-titulo {
+  font-family: var(--fonte-alternativa);
+  font-size: 36px;
+  color: var(--cor-marrom);
+  font-weight: lighter;
+}
+.texto-elaborado-2 {
+  display: flex;
+  flex-direction: row;
+  padding-top: 4rem;
+  justify-content: space-around; /* Espaça os itens uniformemente */
+  flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte em telas menores */
+}
+
+.texto-elaborado-item {
+  display: flex;
+  align-items: center; /* Alinha verticalmente a imagem e o texto */
+  margin: 0 2rem; /* Adiciona espaçamento horizontal entre os itens */
+  /* Ajuste o valor conforme necessário */
+}
+
+.icone-texto-elaborado {
+  width: 34px;
+  height: 34px;
+  margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.texto-elaborado-descricao {
+  font-family: var(--fonte-poppins);
+  color: var(--cor-marrom);
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0; /* Remove a margem superior e inferior para alinhamento adequado */
+}
