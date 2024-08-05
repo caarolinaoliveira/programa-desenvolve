@@ -28,7 +28,7 @@
 .frete-gratis-texto {
   display: flex;
   width: 300%;
-  animation: marquee 50s linear infinite;
+  animation: marquee 80s linear infinite;
 }
 
 .frete-gratis-texto span {
