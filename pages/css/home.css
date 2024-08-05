@@ -442,3 +442,35 @@
 .container-produtos-botao:hover {
   background-color: var(--cor-hover);
 }
+
+/* BANNER TERCIÁRIO */
+.section-banner-terciario {
+  background: url(../assets/img-fundo-png.png);
+  background-color: var(--cor-branco);
+  background-size: cover; /* Cobrir toda a área da seção */
+  background-position: center; /* Centralizar a imagem */
+  background-repeat: no-repeat; /* Não repetir a imagem */
+  height: 70vh; /* Altura de 100% da viewport */
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Centralizar verticalmente */
+  align-items: center; /* Centralizar horizontalmente */
+  text-align: center; /* Centralizar texto */
+}
+.titulo-banner-terciario {
+  font-family: var(--fonte-alternativa);
+  font-size: 48px;
+  color: var(--cor-branco);
+  padding-bottom: 2rem;
+}
+
+.descricao-banner-terciario {
+  font-family: var(--fonte-poppins);
+  font-size: 18px;
+  font-weight: lighter;
+  color: var(--cor-branco);
+  text-align: center;
+}
+.banner-terciario-left {
+  padding: 3rem;
+}
