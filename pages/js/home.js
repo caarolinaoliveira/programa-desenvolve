@@ -21,3 +21,15 @@ function adicionarFavorito(icon) {
     icon.src = "assets/icone-favorito-vermelho.png";
   }
 }
+
+// home.js
+
+function abrirMenuHamburguer() {
+  var sidebar = document.getElementById("sidebar");
+  sidebar.style.visibility = "visible";
+}
+
+function fecharMenuHamburguer() {
+  var sidebar = document.getElementById("sidebar");
+  sidebar.style.visibility = "hidden";
+}

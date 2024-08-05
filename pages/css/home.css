@@ -64,6 +64,7 @@
 .nav-bar-boti {
   font-family: var(--fonte-alternativa);
   font-size: 36px;
+  visibility: hidden;
 }
 
 /* nav bar meio */
@@ -71,6 +72,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap; /* Garante que os itens não quebrem para a próxima linha */
+  visibility: hidden;
 }
 
 .nav-bar-home,
@@ -147,39 +149,61 @@
   margin-left: 0; /* Remove a margem esquerda do primeiro item */
 }
 
-/* Estilos para telas menores (tablets) */
-@media (max-width: 768px) {
-  .nav-bar-3 {
-    flex-direction: column; /* Muda a direção dos itens para coluna */
-    align-items: flex-start; /* Alinha os itens à esquerda */
+@media (min-width: 700px) and (max-width: 2000px) {
+  .nav-bar-2 {
+    visibility: visible;
   }
-
-  .nav-bar-3-usuario,
-  .nav-bar-3-pesquisar,
-  .nav-bar-3-carrinho {
-    width: 24px; /* Aumenta o tamanho dos ícones */
-    height: 24px;
-    margin-left: 10px; /* Reduz o espaço entre as imagens */
+  .nav-bar-boti {
+    visibility: visible;
+  }
+  .icone-menu-hamburguer {
+    visibility: hidden;
   }
 }
 
-/* Estilos para telas muito pequenas (smartphones) */
-@media (max-width: 480px) {
-  .nav-bar-3 {
-    flex-direction: column; /* Muda a direção dos itens para coluna */
-    align-items: flex-start; /* Alinha os itens à esquerda */
-    padding: 10px; /* Adiciona padding para melhorar o espaçamento */
-  }
+/* SIDEBAR */
+/* #menu-icon {
+} */
 
-  .nav-bar-3-usuario,
-  .nav-bar-3-pesquisar,
-  .nav-bar-3-carrinho {
-    width: 30px; /* Aumenta ainda mais o tamanho dos ícones */
-    height: 30px;
-    margin-left: 8px; /* Reduz o espaço entre as imagens */
-  }
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--fonte-poppins);
+  font-optical-sizing: auto;
+  font-weight: lighter;
+  cursor: pointer;
+  width: 350px;
+  background-color: var(--cor-branco);
+  height: 100%;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  border-top-right-radius: 3%;
+  visibility: hidden;
 }
 
+.sidebar-top {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 7rem;
+}
+.icone-sidebar {
+  padding-right: 6rem;
+}
+.sidebar-link {
+  padding-top: 1rem;
+}
+
+.sidebar-link:hover {
+  color: #6d6d6f;
+}
+.navbar-icon {
+  width: 20px;
+  height: 20px;
+}
 /* IMAGEM PRINCIPAL */
 .imagem-principal {
   background: url(../assets/img-fundoprincipal-png.png);
