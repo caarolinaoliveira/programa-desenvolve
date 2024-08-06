@@ -1019,6 +1019,15 @@ footer {
 .footer-3-descricao {
   font-family: var(--fonte-poppins);
   font-weight: 300;
+  transition: transform 0.3s ease;
+}
+
+.footer-1-descricao:hover,
+.footer-2-descricao:hover,
+.footer-3-descricao:hover {
+  transform: scale(1.1);
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .footer-1-direitos {
