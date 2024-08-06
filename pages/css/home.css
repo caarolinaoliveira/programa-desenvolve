@@ -1035,3 +1035,39 @@ footer {
   font-weight: 300;
   padding-top: 4rem;
 }
+
+/* CRUD */
+
+.produtos-api {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 4rem;
+}
+.crud-titulo {
+  font-family: var(--fonte-alternativa);
+  font-size: 36px;
+  color: var(--cor-marrom);
+  font-weight: bold;
+  text-align: center;
+  margin-top: 4rem;
+}
+.crud-botao {
+  text-decoration: none;
+  font-family: var(--fonte-poppins);
+  height: 46px;
+  width: 198px;
+  background-color: var(--cor-verde);
+  color: var(--cor-branco);
+  border: none;
+  border-radius: 0.6rem;
+  padding-right: 0.5rem;
+  padding-left: 10px;
+  outline: none;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.crud-botao:hover {
+  background-color: var(--cor-hover);
+}

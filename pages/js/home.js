@@ -33,3 +33,9 @@ function fecharMenuHamburguer() {
   var sidebar = document.getElementById("sidebar");
   sidebar.style.visibility = "hidden";
 }
+
+// direcionar links
+
+function direcionarLinkCrud() {
+  window.location.href = "crud.html";
+}

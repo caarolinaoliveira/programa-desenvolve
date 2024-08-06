@@ -1,17 +1,22 @@
 {
   "name": "programa-desenvolve",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Projeto Boti Students",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next dev"
+    "dev": "next dev",
+    "dev-nodemon": "nodemon server.js"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "express": "^4.18.1",
     "next": "^13.1.6",
+    "nodemon": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  }
+  },
+  "keywords": []
 }

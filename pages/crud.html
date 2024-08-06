@@ -6,6 +6,7 @@
     <title>Boti Students - Home</title>
     <link rel="stylesheet" href="css/home.css" />
     <script src="js/home.js" defer></script>
+    <script src="js/crud.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -50,7 +51,7 @@
         <h3 class="sidebar-link">HOME</h3>
         <h3 class="sidebar-link">LOJA</h3>
         <h3 class="sidebar-link">NOSSA HISTORIA</h3>
-        <h3 class="sidebar-link" onclick="direcionarLinkCrud()">CRUD</h3>
+        <h3 class="sidebar-link">CRUD</h3>
       </div>
     </div>
 
@@ -102,89 +103,13 @@
       </div>
     </nav>
 
-    <section class="imagem-principal">
-      <h1 class="imagem-principal-titulo">
-        Olhe para dentro de você <br />e descubra
-      </h1>
-      <p class="imagem-principal-descricao">
-        Descubra nossa linha de cosméticos premium, criada para realçar sua
-        beleza natural e proporcionar confiança e radiância. <br />
-        Cuide da sua pele com nossos produtos de alta qualidade e sinta-se única
-        todos os dias.
-      </p>
-      <div class="imagem-principal-bota">
-        <input
-          class="imagem-principal-botao"
-          type="button"
-          value="Veja a coleção"
-        />
-      </div>
-    </section>
-
-    <section class="texto-elaborado">
-      <div>
-        <h2 class="texto-elaborado-titulo">
-          Nossos produtos naturais para a pele são elaborados com paciência,
-          produtos de ponta e ingredientes inovadores para fornecer a melhor
-          experiência de luxo em cuidados com a pele.
-        </h2>
-      </div>
-      <div class="texto-elaborado-2">
-        <div class="texto-elaborado-item">
-          <img
-            class="icone-texto-elaborado"
-            src="assets/icone-idioma.png"
-            alt="símbolo duradouro"
-          />
-          <h4 class="texto-elaborado-descricao">
-            Duradouro e <br />
-            sustentável
-          </h4>
-        </div>
-        <div class="texto-elaborado-item">
-          <img
-            class="icone-texto-elaborado"
-            src="assets/icone-maos.png"
-            alt="símbolos de mãos unidas"
-          />
-          <h4 class="texto-elaborado-descricao">
-            Feito com carinho para <br />
-            todos os corpos
-          </h4>
-        </div>
-        <div class="texto-elaborado-item">
-          <img
-            class="icone-texto-elaborado"
-            src="assets/icone-facefeliz.png"
-            alt="símbolo face feliz"
-          />
-          <h4 class="texto-elaborado-descricao">
-            Imbatível <br />
-            confortável
-          </h4>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-banner-secundario">
-      <div class="banner-left">
-        <h3 class="banner-left-titulo">
-          Creme corporal com vitamina C para clareamento da pele
-        </h3>
-        <p class="banner-left-descricao">
-          Produto a base de vitamina C: melhora o aspecto da pele, <br />
-          atrasa o envelhecimento e clareia a pele.
-        </p>
-        <div class="imagem-principal-bota">
-          <input
-            class="banner-secundario-botao"
-            type="button"
-            value="Compre agora"
-          />
-        </div>
-      </div>
-      <div class="banner-right">
-        <img class="banner-right-img" src="assets/img-banheira.jpg" alt="" />
+    <section class="crud">
+      <h2 class="crud-titulo">Gestão de Produtos</h2>
+      <div class="produtos-api">
+        <input class="crud-botao" value="Adicionar Produto" type="button" />
+        <input class="crud-botao" value="Listar Produtos" type="button" />
+        <input class="crud-botao" value="Atualizar Produtos" type="button" />
+        <input class="crud-botao" value="Remover Produtos" type="button" />
       </div>
     </section>
 
@@ -304,83 +229,6 @@
               type="button"
             />
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-banner-terciario">
-      <div class="banner-left banner-terciario-left">
-        <h3 class="titulo-banner-terciario">Nossa história</h3>
-        <p class="descricao-banner-terciario">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui alias
-          voluptates vitae accusamus dignissimos minus <br />
-          debitis incidunt temporibus? Alias sit aliquam error odio suscipit?
-          Soluta officiis neque rerum libero eius? Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Eveniet at numquam eaque molestias dicta
-          velit tempore <br />
-          eum expedita nostrum perferendis nisi porro libero quae, quidem
-          soluta, hic distinctio sit pariatur.
-        </p>
-      </div>
-      <div class="banner-right">
-        <img
-          class="banner-right-img"
-          src="assets/img-face-semredimensionar.png"
-          alt="imagem de um rosto com efeitos especiais"
-        />
-      </div>
-    </section>
-
-    <section class="boletim-informativo">
-      <h2 class="boletim-informativo-titulo">
-        Junte-se ao nosso boletim <br />
-        informativo e <br />
-        receba ofertas exclusivas
-      </h2>
-      <form action="your-server-endpoint" method="post" id="subscribeForm">
-        <input type="email" name="email" placeholder="Seu e-mail" required />
-        <button type="submit">Inscrever-se</button>
-      </form>
-    </section>
-
-    <section class="compre-por-categorias">
-      <div class="categorias-top">
-        <h2 class="categorias-top-titulo">Compre por categorias</h2>
-        <p class="categorias-top-veja-tudo">Veja tudo</p>
-      </div>
-
-      <div class="categorias-bottom">
-        <div class="categorias-bottom-item">
-          <img
-            class="categorias-bottom-item-img"
-            src="assets/img-footer1.png"
-            alt="imagem aleatória de maos segurando sérum"
-          />
-          <h4 class="categorias-bottom-item-titulo">SÉRUM</h4>
-        </div>
-        <div class="categorias-bottom-item">
-          <img
-            class="categorias-bottom-item-img"
-            src="assets/img-footer2.png"
-            alt="imagem aleatória de maos segurando produto"
-          />
-          <h4 class="categorias-bottom-item-titulo">BODY WASH</h4>
-        </div>
-        <div class="categorias-bottom-item">
-          <img
-            class="categorias-bottom-item-img"
-            src="assets/img-footer3.png"
-            alt="imagem aleatória de maos segurando um produto"
-          />
-          <h4 class="categorias-bottom-item-titulo">FACE WASH</h4>
-        </div>
-        <div class="categorias-bottom-item">
-          <img
-            class="categorias-bottom-item-img"
-            src="assets/img-footer4.png"
-            alt="imagem aleatória de maos segurando um produto"
-          />
-          <h4 class="categorias-bottom-item-titulo">CLEANSER</h4>
         </div>
       </div>
     </section>
