@@ -986,3 +986,43 @@
 .categorias-bottom-item-titulo {
   font-family: var(--fonte-poppins);
 }
+
+/* FOOTER */
+
+footer {
+  background: url(../assets/img-fundo-png.png);
+  background-color: var(--cor-branco);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  color: var(--cor-branco);
+}
+
+.footer-1-titulo,
+.footer-2-titulo,
+.footer-3-titulo {
+  font-family: var(--fonte-alternativa);
+  font-weight: 300;
+  font-size: 24px;
+  padding-bottom: 2rem;
+}
+
+.footer-1-descricao,
+.footer-2-descricao,
+.footer-3-descricao {
+  font-family: var(--fonte-poppins);
+  font-weight: 300;
+}
+
+.footer-1-direitos {
+  font-family: var(--fonte-poppins);
+  font-weight: 300;
+  padding-top: 4rem;
+}
