@@ -11,6 +11,7 @@ class ProdutoController {
         .json({ message: `${erro.message} - falha na requisição` });
     }
   }
+
   static async listarProdutoPorId(req, res) {
     try {
       const id = req.params.id;
@@ -19,7 +20,7 @@ class ProdutoController {
     } catch (erro) {
       res
         .status(500)
-        .json({ message: `${erro.message} - falha na requisição do produto` });
+        .json({ message: `${erro.message} - falha na requisição do livro` });
     }
   }
 
@@ -40,7 +41,7 @@ class ProdutoController {
     try {
       const id = req.params.id;
       await produto.findByIdAndUpdate(id, req.body);
-      res.status(200).json({ message: `$erro.message` });
+      res.status(200).json({ message: "produto atualizado com sucesso" });
     } catch (erro) {
       res
         .status(500)

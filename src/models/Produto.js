@@ -4,7 +4,8 @@ const produtoSchema = new mongoose.Schema(
   {
     id: { type: mongoose.Schema.Types.ObjectId },
     titulo: { type: mongoose.Schema.Types.String, required: true },
-    preco: { type: Number },
+    preco_atual: { type: Number },
+    preco_antigo: { type: Number },
   },
   { versionKey: false }
 );

@@ -6,7 +6,7 @@
     <title>Boti Students - Home</title>
     <link rel="stylesheet" href="css/home.css" />
     <script src="js/home.js" defer></script>
-    <script src="js/crud.js" defer></script>
+    <script src="js/app.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -104,133 +104,15 @@
     </nav>
 
     <section class="crud">
-      <h2 class="crud-titulo">Gestão de Produtos</h2>
-      <div class="produtos-api">
-        <input class="crud-botao" value="Adicionar Produto" type="button" />
-        <input class="crud-botao" value="Listar Produtos" type="button" />
-        <input class="crud-botao" value="Atualizar Produtos" type="button" />
-        <input class="crud-botao" value="Remover Produtos" type="button" />
-      </div>
-    </section>
-
-    <section class="produtos-em-destaque">
-      <div class="produtos-em-destaque-titulo">
-        <h2>Nossos produtos em destaque</h2>
-      </div>
-      <div class="produtos-em-destaque-lista">
-        <div class="container-produtos">
-          <div class="container-produtos-top">
-            <h5 class="produtos-em-destaque-desconto">35%</h5>
-            <img
-              class="produtos-destaque-favorito"
-              src="assets/icone-favorito.png"
-              alt="Ícone de favorito"
-              onclick="adicionarFavorito(this)"
-            />
-
-            <img
-              class="produtos-destaque-img"
-              src="assets/img-anti-acne-semredimensionar.jpg"
-              alt="imagem de produto com conta gotas"
-            />
-          </div>
-          <div class="container-produtos-bottom">
-            <h5 class="container-produtos-titulo">
-              Alfa Arbutina e Vitamina C
-            </h5>
-            <h4 class="container-produtos-preco">R$ 135,00</h4>
-            <p class="container-produtos-preco-anterior">R$ 209,00</p>
-            <input
-              class="container-produtos-botao"
-              value="Compre Agora"
-              type="button"
-            />
-          </div>
-        </div>
-        <div class="container-produtos">
-          <div class="container-produtos-top">
-            <h5 class="produtos-em-destaque-desconto">25%</h5>
-            <img
-              class="produtos-destaque-favorito"
-              src="assets/icone-favorito.png"
-              alt="Ícone de favorito"
-              onclick="adicionarFavorito(this)"
-            />
-
-            <img
-              class="produtos-destaque-img"
-              src="assets/img-multi-vit-semredimensionar.jpg"
-              alt="imagem de produto com conta gotas"
-            />
-          </div>
-          <div class="container-produtos-bottom">
-            <h5 class="container-produtos-titulo">Gel de olhos lifting</h5>
-            <h4 class="container-produtos-preco">R$ 100,00</h4>
-            <p class="container-produtos-preco-anterior">R$ 129,00</p>
-            <input
-              class="container-produtos-botao"
-              value="Compre Agora"
-              type="button"
-            />
-          </div>
-        </div>
-        <div class="container-produtos">
-          <div class="container-produtos-top">
-            <h5 class="produtos-em-destaque-desconto">35%</h5>
-            <img
-              class="produtos-destaque-favorito"
-              src="assets/icone-favorito.png"
-              alt="Ícone de favorito"
-              onclick="adicionarFavorito(this)"
-            />
-
-            <img
-              class="produtos-destaque-img"
-              src="assets/img-body-syrum-png.png"
-              alt="imagem de produto com conta gotas"
-            />
-          </div>
-          <div class="container-produtos-bottom">
-            <h5 class="container-produtos-titulo">Vitamina C Serum</h5>
-            <h4 class="container-produtos-preco">R$ 50,00</h4>
-            <p class="container-produtos-preco-anterior">R$ 100,00</p>
-            <input
-              class="container-produtos-botao"
-              value="Compre Agora"
-              type="button"
-            />
-          </div>
-        </div>
-        <div class="container-produtos">
-          <div class="container-produtos-top">
-            <h5 class="produtos-em-destaque-desconto">35%</h5>
-            <img
-              class="produtos-destaque-favorito"
-              src="assets/icone-favorito.png"
-              alt="Ícone de favorito"
-              onclick="adicionarFavorito(this)"
-            />
-
-            <img
-              class="produtos-destaque-img"
-              src="assets/img-vinagre-png.png"
-              alt="imagem de produto com conta gotas"
-            />
-          </div>
-          <div class="container-produtos-bottom">
-            <h5 class="container-produtos-titulo">
-              Hidratante facial - Vinagre
-            </h5>
-            <h4 class="container-produtos-preco">R$ 100,00</h4>
-            <p class="container-produtos-preco-anterior">R$ 149,00</p>
-            <input
-              class="container-produtos-botao"
-              value="Compre Agora"
-              type="button"
-            />
-          </div>
-        </div>
-      </div>
+      <h1>Buscar Produtos</h1>
+      <input
+        type="submit"
+        id="fetch-products"
+        value="Buscar todos os produtos"
+        onclick="buscarListaProdutos()"
+      />
+      <label id="product-list-label" for=""></label>
+      <ul id="product-list"></ul>
     </section>
 
     <footer>
@@ -268,5 +150,31 @@
         <p class="footer-3-descricao">(41) 99999-9999</p>
       </div>
     </footer>
+
+    <script>
+      function buscarListaProdutos() {
+        fetch(
+          "https://humble-eureka-v6vv7j59j97qhpw6r-3000.app.github.dev/produtos"
+        )
+          .then((response) => response.json())
+          .then((products) => {
+            const productListLabel =
+              document.getElementById("product-list-label");
+            const productList = document.getElementById("product-list");
+
+            productList.innerHTML = ""; // Limpa a lista atual
+            products.forEach((product) => {
+              const li = document.createElement("li");
+              li.textContent = `ID: ${product.id} - Título: ${product.titulo} - Preço Atual: R$${product.preco_atual}`;
+              productList.appendChild(li);
+            });
+
+            productListLabel.textContent = `Total de produtos: ${products.length}`;
+          })
+          .catch((error) => {
+            console.error("Erro ao buscar os produtos:", error);
+          });
+      }
+    </script>
   </body>
 </html>
