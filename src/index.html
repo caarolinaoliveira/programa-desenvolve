@@ -91,10 +91,23 @@
         </div>
       </section>
     </section>
+
+    <div class="modal-overlay" id="modal">
+      <div class="modal">
+        <h2>Bem-vindo!</h2>
+        <p>
+          Nessa tela disponibilizamos validação de formulários. Teste os campos
+          para fins didáticos. A seguir, para ser direcionado para as próximas
+          telas clique em qualquer um dos botões
+        </p>
+        <button onclick="closeModal()">Fechar</button>
+      </div>
+    </div>
+
     <script>
-      alert(
-        "Nessa tela disponibilizamos validação de formulários. Teste os campos para fins didáticos. A seguir, para ser direcionado para as próximas telas clique em qualquer um dos botões"
-      );
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
     </script>
   </body>
 </html>

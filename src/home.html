@@ -425,5 +425,26 @@
         <p class="footer-3-descricao">(41) 99999-9999</p>
       </div>
     </footer>
+
+    <div class="modal-overlay" id="modal">
+      <div class="modal">
+        <h2>Bem-vindo!</h2>
+        <p>
+          Nessa tela disponibilizamos: responsividade <br />
+          menu-hamburguer em telas menores <br />
+          validação de formulário <br />
+          favoritos personalizados <br />
+          <strong>CRUD</strong> <br />
+          Para testar o CRUD, basta clicar na opção 'CRUD' no menu.
+        </p>
+        <button onclick="closeModal()">Fechar</button>
+      </div>
+    </div>
+
+    <script>
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+    </script>
   </body>
 </html>
