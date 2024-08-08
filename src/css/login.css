@@ -160,9 +160,8 @@ h1 {
   font-size: 14px;
 }
 
-/* Estilização dos botões */
-input[type="submit"],
-input[type="button"] {
+/* botoes  */
+.entrar1 {
   width: 200px; /* Define uma largura fixa para os botões */
   background-color: var(--cor-azul);
   color: var(--cor-branco);
@@ -180,7 +179,7 @@ input[type="button"] {
 .entrar2 {
   width: 200px; /* Define uma largura fixa para o botão à direita */
   background-color: var(--cor-branco);
-  color: #8b4513;
+  color: var(--cor-azul);
   border: none;
   padding: 10px 20px;
   margin: 7px;
@@ -199,7 +198,7 @@ input[type="button"] {
 /* Efeito ao passar o cursor sobre o botão */
 input[type="submit"]:hover,
 input[type="button"]:hover {
-  background-color: #484c38;
+  background-color: #b59745;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
