@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/file.png" />
   </head>
   <body>
     <header class="frete-gratis">
@@ -150,31 +150,5 @@
         <p class="footer-3-descricao">(41) 99999-9999</p>
       </div>
     </footer>
-
-    <script>
-      function buscarListaProdutos() {
-        fetch(
-          "https://humble-eureka-v6vv7j59j97qhpw6r-3000.app.github.dev/produtos"
-        )
-          .then((response) => response.json())
-          .then((products) => {
-            const productListLabel =
-              document.getElementById("product-list-label");
-            const productList = document.getElementById("product-list");
-
-            productList.innerHTML = ""; // Limpa a lista atual
-            products.forEach((product) => {
-              const li = document.createElement("li");
-              li.textContent = `ID: ${product.id} - Título: ${product.titulo} - Preço Atual: R$${product.preco_atual}`;
-              productList.appendChild(li);
-            });
-
-            productListLabel.textContent = `Total de produtos: ${products.length}`;
-          })
-          .catch((error) => {
-            console.error("Erro ao buscar os produtos:", error);
-          });
-      }
-    </script>
   </body>
 </html>
