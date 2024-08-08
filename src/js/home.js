@@ -39,3 +39,7 @@ function fecharMenuHamburguer() {
 function direcionarLinkCrud() {
   window.location.href = "crud.html";
 }
+
+function direcionarLinkHome() {
+  window.location.href = "home.html";
+}

@@ -216,6 +216,7 @@
 
 /* Links da sidebar */
 .sidebar-link {
+  text-decoration: none;
   padding-top: 1rem;
   font-family: var(--fonte-poppins);
   font-weight: 300;
