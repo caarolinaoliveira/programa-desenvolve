@@ -18,6 +18,38 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/file.png" />
+    <script>
+      async function buscarListaProdutos() {
+        const url = "https://programa-desenvolve.vercel.app/produtos";
+        const productList = document.getElementById("product-list");
+        const productLabel = document.getElementById("product-list-label");
+
+        try {
+          const response = await fetch(url);
+          const produtos = await response.json();
+
+          // Limpar a lista e o label
+          productList.innerHTML = "";
+          productLabel.textContent = "";
+
+          // Verificar se há produtos
+          if (produtos.length > 0) {
+            productLabel.textContent = "Lista de Produtos:";
+
+            produtos.forEach((produto) => {
+              const listItem = document.createElement("li");
+              listItem.textContent = `ID: ${produto.id} - Título: ${produto.titulo} - Preço Atual: R$ ${produto.preco_atual}`;
+              productList.appendChild(listItem);
+            });
+          } else {
+            productLabel.textContent = "Nenhum produto encontrado.";
+          }
+        } catch (error) {
+          productLabel.textContent = "Erro ao buscar os produtos.";
+          console.error("Erro:", error);
+        }
+      }
+    </script>
   </head>
   <body>
     <header class="frete-gratis">
