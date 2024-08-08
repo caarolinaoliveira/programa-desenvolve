@@ -1,0 +1,110 @@
+/* Estilo da seção CRUD */
+.crud {
+  padding: 20px;
+  background-color: #939393;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Espaçamento entre as seções */
+}
+
+/* Estilo do botão de busca */
+#fetch-products {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745; /* Verde padrão */
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+#fetch-products:hover {
+  background-color: #218838; /* Verde mais escuro ao passar o mouse */
+}
+
+#fetch-products:active {
+  transform: scale(0.98); /* Leve efeito de clique */
+}
+
+#fetch-products:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5); /* Sombra de foco */
+}
+
+/* Estilo das seções */
+.section {
+  background-color: #ffffff; /* Fundo branco para as seções */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo dos títulos */
+.section h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilo dos formulários e inputs */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaçamento entre os elementos do formulário */
+}
+
+form label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+form input[type="text"],
+form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+form input[type="submit"] {
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo das áreas de resultado */
+#create-result,
+#delete-result,
+#update-result,
+#product-details {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #555;
+}

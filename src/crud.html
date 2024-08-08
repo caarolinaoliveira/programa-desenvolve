@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boti Students - Home</title>
     <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/crud.css" />
     <script src="js/home.js" defer></script>
     <script src="js/app.js" defer></script>
+    <script src="js/crud.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,38 +20,6 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/file.png" />
-    <script>
-      async function buscarListaProdutos() {
-        const url = "https://programa-desenvolve.vercel.app/produtos";
-        const productList = document.getElementById("product-list");
-        const productLabel = document.getElementById("product-list-label");
-
-        try {
-          const response = await fetch(url);
-          const produtos = await response.json();
-
-          // Limpar a lista e o label
-          productList.innerHTML = "";
-          productLabel.textContent = "";
-
-          // Verificar se há produtos
-          if (produtos.length > 0) {
-            productLabel.textContent = "Lista de Produtos:";
-
-            produtos.forEach((produto) => {
-              const listItem = document.createElement("li");
-              listItem.textContent = `ID: ${produto.id} - Título: ${produto.titulo} - Preço Atual: R$ ${produto.preco_atual}`;
-              productList.appendChild(listItem);
-            });
-          } else {
-            productLabel.textContent = "Nenhum produto encontrado.";
-          }
-        } catch (error) {
-          productLabel.textContent = "Erro ao buscar os produtos.";
-          console.error("Erro:", error);
-        }
-      }
-    </script>
   </head>
   <body>
     <header class="frete-gratis">
@@ -136,15 +106,97 @@
     </nav>
 
     <section class="crud">
-      <h1>Buscar Produtos</h1>
-      <input
-        type="submit"
-        id="fetch-products"
-        value="Buscar todos os produtos"
-        onclick="buscarListaProdutos()"
-      />
-      <label id="product-list-label" for=""></label>
-      <ul id="product-list"></ul>
+      <!-- BUSCAR PRODUTO EM LISTA -->
+      <div class="section">
+        <h1>Buscar Produtos</h1>
+        <input
+          type="submit"
+          id="fetch-products"
+          value="Buscar todos os produtos"
+          onclick="buscarListaProdutos()"
+        />
+        <br />
+        <label id="product-list-label" for=""></label>
+        <ul id="product-list"></ul>
+      </div>
+
+      <!-- BUSCAR PRODUTO POR ID -->
+      <div class="section">
+        <h1>Buscar Produto por ID</h1>
+        <form id="search-by-id-form">
+          <label for="product-id">ID do Produto:</label>
+          <input
+            type="text"
+            id="product-id"
+            name="product-id"
+            placeholder="Digite o ID do produto"
+            required
+          />
+          <input type="submit" id="fetch-product" value="Buscar Produto" />
+        </form>
+        <label id="product-details-label" for=""></label>
+        <div id="product-details"></div>
+      </div>
+
+      <!-- ATUALIZAR PRODUTO -->
+      <div class="section">
+        <h1>Atualizar Produto</h1>
+        <form id="update-product-form">
+          <label for="update-product-id">ID do Produto:</label>
+          <input
+            type="text"
+            id="update-product-id"
+            name="update-product-id"
+            placeholder="Digite o ID do produto"
+            required
+          />
+          <label for="update-product-json">Dados do Produto (JSON):</label>
+          <textarea
+            id="update-product-json"
+            name="update-product-json"
+            placeholder='Digite os dados do produto em formato JSON, por exemplo: {"titulo": "Novo Nome", "preco_atual": 99.99}'
+            required
+          ></textarea>
+          <input type="submit" id="update-product" value="Atualizar Produto" />
+        </form>
+        <label id="update-result-label" for=""></label>
+        <div id="update-result"></div>
+      </div>
+
+      <!-- CRIAR PRODUTO -->
+      <div class="section">
+        <h1>Criar Novo Produto</h1>
+        <form id="create-product-form">
+          <label for="create-product-json">Dados do Produto (JSON):</label>
+          <textarea
+            id="create-product-json"
+            name="create-product-json"
+            placeholder='Digite os dados do produto em formato JSON, por exemplo: {"titulo": "Novo Produto", "preco_atual": 199.99}'
+            required
+          ></textarea>
+          <input type="submit" id="create-product" value="Criar Produto" />
+        </form>
+        <label id="create-result-label" for=""></label>
+        <div id="create-result"></div>
+      </div>
+
+      <!-- DELETAR PRODUTO -->
+      <div class="section">
+        <h1>Deletar Produto</h1>
+        <form id="delete-product-form">
+          <label for="delete-product-id">ID do Produto:</label>
+          <input
+            type="text"
+            id="delete-product-id"
+            name="delete-product-id"
+            placeholder="Digite o ID do produto"
+            required
+          />
+          <input type="submit" id="delete-product" value="Deletar Produto" />
+        </form>
+        <label id="delete-result-label" for=""></label>
+        <div id="delete-result"></div>
+      </div>
     </section>
 
     <footer>

@@ -1071,3 +1071,8 @@ footer {
 .crud-botao:hover {
   background-color: var(--cor-hover);
 }
+
+.crud {
+  font-family: var(--fonte-poppins);
+  margin-bottom: 5rem;
+}
